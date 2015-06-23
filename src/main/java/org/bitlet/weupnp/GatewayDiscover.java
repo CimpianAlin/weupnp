@@ -59,7 +59,10 @@ public class GatewayDiscover {
     /**
      * The timeout to set for the initial broadcast request
      */
-    private static final int TIMEOUT = 3000;
+    private static final int TIMEOUT = 1500;
+
+    private final String stSearch;
+
     /**
      * A map of the GatewayDevices discovered so far.
      * The assumption is that a machine is connected to up to a Gateway Device
@@ -71,6 +74,12 @@ public class GatewayDiscover {
      * The default constructor
      */
     public GatewayDiscover() {
+        this.stSearch = "upnp:rootdevice";
+    }
+
+    public GatewayDiscover(String stSearch)
+    {
+        this.stSearch = stSearch;
     }
 
     /**
