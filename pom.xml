@@ -3,9 +3,9 @@
     <groupId>org.bitlet</groupId>
     <artifactId>weupnp</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.2-jitsi-1-SNAPSHOT</version>
     <name>weupnp</name>
-    <url>https://github.com/bitletorg/weupnp</url>
+    <url>https://github.com/jitsi/weupnp</url>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -53,9 +53,9 @@
     </properties>
     <description>Weupnp is a lightweight Java library, released under the LGPL licence, designed to implement the UPnP protocol to handle port mappings on Gateway Devices.</description>
     <scm>
-        <connection>scm:git:https://github.com/bitletorg/weupnp.git</connection>
-        <developerConnection>scm:git:https://github.com/bitletorg/weupnp.git</developerConnection>
-        <url>https://github.com/bitletorg/weupnp</url>
+        <connection>scm:git:https://github.com/jitsi/weupnp.git</connection>
+        <developerConnection>scm:git:https://github.com/jitsi/weupnp.git</developerConnection>
+        <url>https://github.com/jitsi/weupnp</url>
     </scm>
     <licenses>
         <license>
