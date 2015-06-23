@@ -189,6 +189,8 @@ public class GatewayDevice {
         HttpURLConnection conn = (HttpURLConnection) postUrl.openConnection();
 
         conn.setRequestMethod("POST");
+        conn.setConnectTimeout(1500);
+        conn.setReadTimeout(1500);
         conn.setDoOutput(true);
         conn.setRequestProperty("Content-Type", "text/xml");
         conn.setRequestProperty("SOAPAction", soapAction);
