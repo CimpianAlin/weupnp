@@ -95,6 +95,11 @@ public class GatewayDevice {
      * The model name
      */
     private String modelName;
+    
+    /**
+     * The timeout in milliseconds for receiving response.
+     */
+    private static final int TIMEOUT = 750;
 
     /**
      * Creates a new instance of GatewayDevice
@@ -116,7 +121,8 @@ public class GatewayDevice {
     public void loadDescription() throws SAXException, IOException {
 
         URLConnection urlConn = new URL(getLocation()).openConnection();
-
+        urlConn.setReadTimeout(TIMEOUT);
+        
         XMLReader parser = XMLReaderFactory.createXMLReader();
         parser.setContentHandler(new GatewayDeviceHandler(this));
         parser.parse(new InputSource(urlConn.getInputStream()));
